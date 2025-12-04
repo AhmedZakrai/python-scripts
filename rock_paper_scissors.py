@@ -11,10 +11,13 @@ while True :
   select = input ('>')
   if select == 'r' :
      select = 'ROCK'
+     u = 1
   elif select == 'p' :
      select = 'PAPER'
+     u = 2
   elif select == 's' :
      select = 'SCISSORS'
+     u = 3
   elif select == 'q' :
      sys.exit()
   else :
@@ -25,11 +28,24 @@ while True :
 
   if  choes == 1 : 
     print ('ROCK\nYou win!')
-    win += 1
   elif choes == 2 :
      print ('SCISSORS\nSory you losse!')
-     los += 1
   elif choes == 3 :
     print ('PAPER\nIt is a tie!')
+   
+  if choes == u : 
     tie += 1
+  elif chose == 2 and u == 1 :
+    los += 1
+  elif chose == 3 and u == 1 :
+    win += 1
+  elif chose == 1 and u == 2 :
+    win += 1
+  elif chose == 3 and u == 2 :
+    los += 1
+  elif chose == 1 and u == 3 :
+    los += 1
+  elif chose == 2 and u == 3 :
+    win += 1
+  
 
